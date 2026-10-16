@@ -1,0 +1,40 @@
+{
+  "name": "matter-dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard for Python Matter Server",
+  "repository": "https://github.com/home-assistant-libs/python-matter-server/",
+  "author": "Home Assistant maintainers",
+  "license": "Apache-2.0",
+  "scripts": {
+    "prepublishOnly": "script/build"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.5",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "prettier": "^3.6.2",
+    "rollup": "^4.59.0",
+    "serve": "^14.2.6",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@lit/context": "^1.1.2",
+    "@material/web": "^1.2.0",
+    "@mdi/js": "^7.4.47",
+    "lit": "^3.1.2",
+    "memoize-one": "^6.0.0",
+    "tslib": "^2.6.2"
+  },
+  "overrides": {
+    "brace-expansion": "5.0.8",
+    "cross-spawn": "7.0.6",
+    "minimatch": "10.2.6",
+    "path-to-regexp": "3.3.0",
+    "picomatch": "4.0.4",
+    "serialize-javascript": "7.0.7"
+  }
+}

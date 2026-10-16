@@ -1,0 +1,33 @@
+{
+  "is_bridge": true,
+  "node_devices": [
+    {
+      "device_type_instances": [
+        {
+          "type": "OnOffLight",
+          "platforms": ["light"],
+          "entities": [
+            {
+              "entity_id": "light.kitchen_ceiling",
+              "state": "on"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device_type_instances": [
+        {
+          "type": "OnOffLight",
+          "platforms": ["light"],
+          "entities": [
+            {
+              "entity_id": "light.living_room_ceiling",
+              "state": "off"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

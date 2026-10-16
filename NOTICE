@@ -1,0 +1,30 @@
+resflex-open-matter-hems-connector
+Copyright 2026 ElaadNL
+
+This product includes software developed by ElaadNL.
+
+================================================================================
+Vendored: python-matter-server
+================================================================================
+
+This product includes software from the python-matter-server project, vendored
+under `matter_server/` (and supporting files: `tests/`, `scripts/`, `dashboard/`,
+`main.py`, `Dockerfile`, `Dockerfile.dev`, `docker-entrypoint.sh`,
+`DEVELOPMENT.md`).
+
+  Original upstream:    https://github.com/home-assistant-libs/python-matter-server
+  Intermediate fork:    https://github.com/Computime-OSS/python-matter-server (branch `dev`)
+  License:              Apache License 2.0
+  Copyright:            The python-matter-server contributors
+
+The vendored code is maintained in this repository as a hard fork (no
+upstream-sync branch, no cherry-pick obligation). Modifications made under this
+project are © 2026 ElaadNL and are also distributed under the Apache License 2.0.
+
+================================================================================
+
+The EVSE-simulator firmware this connector is tested against is maintained in the
+separate `resflex-open-matter-device-connector` repository. See
+`docs/esp-matter-integration.md`.
+
+Full Apache License 2.0 text is available in `LICENSE`.

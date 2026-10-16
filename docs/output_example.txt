@@ -1,0 +1,190 @@
+================================================================================
+Part 1 — Matter Device Comparison  (device 有/缺)
+================================================================================
+Device Node ID : 0x0051
+Source         : matter_ev_charger.json
+Desired spec   : Desired Matter structure - Descriptor, BasicInformation, EnergyEvse, EnergyEvseMode, PowerSource, DeviceEnergyManagement, DeviceEnergyManagementMode (attr+cmd+evt)
+Endpoints found: ['0x0000', '0x0001', '0x0002', '0x0003', '0x0004']
+
+Matter Summary: 68 present, 6 missing (of 74 desired)
+
+--------------------------------------------------------------------------------
+PRESENT (Matter 有):
+--------------------------------------------------------------------------------
+  [Attr] Descriptor (0x001D) | DeviceTypeList (0x0000) → ep ['0x0000', '0x0001', '0x0002', '0x0003', '0x0004']
+  [Attr] Descriptor (0x001D) | ServerList (0x0001) → ep ['0x0000', '0x0001', '0x0002', '0x0003', '0x0004']
+  [Attr] Descriptor (0x001D) | ClientList (0x0002) → ep ['0x0000', '0x0001', '0x0002', '0x0003', '0x0004']
+  [Attr] Descriptor (0x001D) | PartsList (0x0003) → ep ['0x0000', '0x0001', '0x0002', '0x0003', '0x0004']
+  [Attr] BasicInformation (0x0028) | VendorID (0x0000) → ep ['0x0000']
+  [Attr] BasicInformation (0x0028) | VendorName (0x0001) → ep ['0x0000']
+  [Attr] BasicInformation (0x0028) | ProductName (0x0002) → ep ['0x0000']
+  [Attr] BasicInformation (0x0028) | ProductID (0x0004) → ep ['0x0000']
+  [Attr] BasicInformation (0x0028) | HardwareVersion (0x0007) → ep ['0x0000']
+  [Attr] BasicInformation (0x0028) | HardwareVersionString (0x0008) → ep ['0x0000']
+  [Attr] BasicInformation (0x0028) | SoftwareVersion (0x0009) → ep ['0x0000']
+  [Attr] BasicInformation (0x0028) | SoftwareVersionString (0x000A) → ep ['0x0000']
+  [Attr] BasicInformation (0x0028) | ManufacturingDate (0x000B) → ep ['0x0000']
+  [Attr] BasicInformation (0x0028) | SerialNumber (0x000F) → ep ['0x0000']
+  [Attr] EnergyEvse (0x0099) | State (0x0000) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | SupplyState (0x0001) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | FaultState (0x0002) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | ChargingEnabledUntil (0x0003) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | CircuitCapacity (0x0005) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | MinimumChargeCurrent (0x0006) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | MaximumChargeCurrent (0x0007) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | UserMaximumChargeCurrent (0x0009) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | NextChargeStartTime (0x0023) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | NextChargeTargetTime (0x0024) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | NextChargeRequiredEnergy (0x0025) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | NextChargeTargetSoC (0x0026) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | SessionID (0x0040) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | SessionDuration (0x0041) → ep ['0x0001']
+  [Attr] EnergyEvse (0x0099) | SessionEnergyCharged (0x0042) → ep ['0x0001']
+  [Cmd]  EnergyEvse (0x0099) | Disable (0x0001) → ep ['0x0001']
+  [Cmd]  EnergyEvse (0x0099) | EnableCharging (0x0002) → ep ['0x0001']
+  [Cmd]  EnergyEvse (0x0099) | SetTargets (0x0005) → ep ['0x0001']
+  [Cmd]  EnergyEvse (0x0099) | GetTargets (0x0006) → ep ['0x0001']
+  [Cmd]  EnergyEvse (0x0099) | ClearTargets (0x0007) → ep ['0x0001']
+  [Attr] EnergyEvseMode (0x009D) | SupportedModes (0x0000) → ep ['0x0001']
+  [Attr] EnergyEvseMode (0x009D) | CurrentMode (0x0001) → ep ['0x0001']
+  [Cmd]  EnergyEvseMode (0x009D) | ChangeToMode (0x0000) → ep ['0x0001']
+  [Cmd]  EnergyEvseMode (0x009D) | ChangeToModeResponse (0x0001) → ep ['0x0001']
+  [Attr] PowerSource (0x002F) | Status (0x0000) → ep ['0x0002']
+  [Attr] PowerSource (0x002F) | Order (0x0001) → ep ['0x0002']
+  [Attr] PowerSource (0x002F) | Description (0x0002) → ep ['0x0002']
+  [Attr] PowerSource (0x002F) | WiredCurrentType (0x0005) → ep ['0x0002']
+  [Attr] PowerSource (0x002F) | WiredNominalVoltage (0x0007) → ep ['0x0002']
+  [Attr] PowerSource (0x002F) | WiredMaximumCurrent (0x0008) → ep ['0x0002']
+  [Attr] PowerSource (0x002F) | EndpointList (0x001F) → ep ['0x0002']
+  [Attr] DeviceEnergyManagement (0x0098) | ESAType (0x0000) → ep ['0x0004']
+  [Attr] DeviceEnergyManagement (0x0098) | ESACanGenerate (0x0001) → ep ['0x0004']
+  [Attr] DeviceEnergyManagement (0x0098) | ESAState (0x0002) → ep ['0x0004']
+  [Attr] DeviceEnergyManagement (0x0098) | AbsMinPower (0x0003) → ep ['0x0004']
+  [Attr] DeviceEnergyManagement (0x0098) | AbsMaxPower (0x0004) → ep ['0x0004']
+  [Attr] DeviceEnergyManagement (0x0098) | PowerAdjustmentCapability (0x0005) → ep ['0x0004']
+  [Attr] DeviceEnergyManagement (0x0098) | Forecast (0x0006) → ep ['0x0004']
+  [Attr] DeviceEnergyManagement (0x0098) | OptOutState (0x0007) → ep ['0x0004']
+  [Attr] PowerTopology (0x009C) | AvailableEndpoints (0x0000) → ep ['0x0003']
+  [Attr] ElectricalPowerMeasurement (0x0091) | Accuracy (0x0000) → ep ['0x0003']
+  [Attr] ElectricalPowerMeasurement (0x0091) | CumulativeEnergyImported (0x0001) → ep ['0x0003']
+  [Attr] ElectricalPowerMeasurement (0x0091) | CumulativeEnergyReset (0x0005) → ep ['0x0003']
+  [Attr] ElectricalEnergyMeasurement (0x0090) | PowerMode (0x0000) → ep ['0x0003']
+  [Attr] ElectricalEnergyMeasurement (0x0090) | NumberOfMeasurementTypes (0x0001) → ep ['0x0003']
+  [Attr] ElectricalEnergyMeasurement (0x0090) | Accuracy (0x0002) → ep ['0x0003']
+  [Attr] ElectricalEnergyMeasurement (0x0090) | Voltage (0x0004) → ep ['0x0003']
+  [Attr] ElectricalEnergyMeasurement (0x0090) | ActiveCurrent (0x0005) → ep ['0x0003']
+  [Attr] ElectricalEnergyMeasurement (0x0090) | ActivePower (0x0008) → ep ['0x0003']
+  [Attr] ElectricalEnergyMeasurement (0x0090) | Frequency (0x000E) → ep ['0x0003']
+  [Attr] DeviceEnergyManagementMode (0x009F) | SupportedModes (0x0000) → ep ['0x0004']
+  [Attr] DeviceEnergyManagementMode (0x009F) | CurrentMode (0x0001) → ep ['0x0004']
+  [Cmd]  DeviceEnergyManagementMode (0x009F) | ChangeToMode (0x0000) → ep ['0x0004']
+  [Cmd]  DeviceEnergyManagementMode (0x009F) | ChangeToModeResponse (0x0001) → ep ['0x0004']
+
+--------------------------------------------------------------------------------
+MISSING (Matter 缺):
+--------------------------------------------------------------------------------
+  [Evt]  EnergyEvse (0x0099) | EVConnected (0x0000)
+  [Evt]  EnergyEvse (0x0099) | EVNotDetected (0x0001)
+  [Evt]  EnergyEvse (0x0099) | EnergyTransferStarted (0x0002)
+  [Evt]  EnergyEvse (0x0099) | EnergyTransferStopped (0x0003)
+  [Evt]  EnergyEvse (0x0099) | Fault (0x0004)
+  [Evt]  EnergyEvse (0x0099) | RFID (0x0005)
+
+
+================================================================================
+Part 2 — Home Assistant Entity Mapping  (HA 有/缺)
+================================================================================
+HA Summary (of 68 Matter-present items):
+  HA mapped   : 66
+  HA unmapped : 2
+
+--------------------------------------------------------------------------------
+Matter:present + HA:yes  (66)  — device 有 + HA 有 mapping
+--------------------------------------------------------------------------------
+  [Attr] Descriptor (0x001D) | DeviceTypeList (0x0000)  →  [sensor] DescriptorDeviceTypeList
+  [Attr] Descriptor (0x001D) | ServerList (0x0001)  →  [sensor] DescriptorServerList
+  [Attr] Descriptor (0x001D) | ClientList (0x0002)  →  [sensor] DescriptorClientList
+  [Attr] Descriptor (0x001D) | PartsList (0x0003)  →  [sensor] DescriptorPartsList
+  [Attr] BasicInformation (0x0028) | VendorID (0x0000)  →  [sensor] BasicInformationDataModelRevision
+  [Attr] BasicInformation (0x0028) | VendorName (0x0001)  →  [sensor] BasicInformationVendorName
+  [Attr] BasicInformation (0x0028) | ProductName (0x0002)  →  [sensor] BasicInformationVendorID
+  [Attr] BasicInformation (0x0028) | ProductID (0x0004)  →  [sensor] BasicInformationProductID
+  [Attr] BasicInformation (0x0028) | HardwareVersion (0x0007)  →  [sensor] BasicInformationHardwareVersion
+  [Attr] BasicInformation (0x0028) | HardwareVersionString (0x0008)  →  [sensor] BasicInformationHardwareVersionString
+  [Attr] BasicInformation (0x0028) | SoftwareVersion (0x0009)  →  [update] MatterUpdate (SoftwareVersion)
+  [Attr] BasicInformation (0x0028) | SoftwareVersionString (0x000A)  →  [update] MatterUpdate (SoftwareVersionString)
+  [Attr] BasicInformation (0x0028) | ManufacturingDate (0x000B)  →  [sensor] BasicInformationManufacturingDate
+  [Attr] BasicInformation (0x0028) | SerialNumber (0x000F)  →  [sensor] BasicInformationSerialNumber
+  [Attr] EnergyEvse (0x0099) | State (0x0000)  →  [binary_sensor] EnergyEvseChargingStatusSensor
+  [Attr] EnergyEvse (0x0099) | SupplyState (0x0001)  →  [binary_sensor+switch] EnergyEvseSupplyStateSensor
+  [Attr] EnergyEvse (0x0099) | FaultState (0x0002)  →  [sensor] EnergyEvseFaultState
+  [Attr] EnergyEvse (0x0099) | ChargingEnabledUntil (0x0003)  →  [sensor] EnergyEvseChargingEnabledUntil
+  [Attr] EnergyEvse (0x0099) | CircuitCapacity (0x0005)  →  [sensor] EnergyEvseCircuitCapacity
+  [Attr] EnergyEvse (0x0099) | MinimumChargeCurrent (0x0006)  →  [sensor] EnergyEvseMinimumChargeCurrent
+  [Attr] EnergyEvse (0x0099) | MaximumChargeCurrent (0x0007)  →  [sensor] EnergyEvseMaximumChargeCurrent
+  [Attr] EnergyEvse (0x0099) | UserMaximumChargeCurrent (0x0009)  →  [sensor+number] EnergyEvseUserMaximumChargeCurrent
+  [Attr] EnergyEvse (0x0099) | NextChargeStartTime (0x0023)  →  [sensor] EnergyEvseNextChargeStartTime
+  [Attr] EnergyEvse (0x0099) | NextChargeTargetTime (0x0024)  →  [sensor] EnergyEvseNextChargeTargetTime
+  [Attr] EnergyEvse (0x0099) | NextChargeRequiredEnergy (0x0025)  →  [sensor] EnergyEvseNextChargeRequiredEnergy
+  [Attr] EnergyEvse (0x0099) | NextChargeTargetSoC (0x0026)  →  [sensor] EnergyEvseNextChargeTargetSoC
+  [Attr] EnergyEvse (0x0099) | SessionID (0x0040)  →  [sensor] EnergyEvseSessionID
+  [Attr] EnergyEvse (0x0099) | SessionDuration (0x0041)  →  [sensor] EnergyEvseSessionDuration
+  [Attr] EnergyEvse (0x0099) | SessionEnergyCharged (0x0042)  →  [sensor] EnergyEvseSessionEnergyCharged
+  [Cmd]  EnergyEvse (0x0099) | Disable (0x0001)  →  [switch] EnergyEvseChargingSwitch (Disable)
+  [Cmd]  EnergyEvse (0x0099) | EnableCharging (0x0002)  →  [switch] EnergyEvseChargingSwitch (EnableCharging)
+  [Cmd]  EnergyEvse (0x0099) | SetTargets (0x0005)  →  [button] EnergyEvseSetTargetsTestButton
+  [Cmd]  EnergyEvse (0x0099) | GetTargets (0x0006)  →  [button] EnergyEvseGetTargetsButton
+  [Cmd]  EnergyEvse (0x0099) | ClearTargets (0x0007)  →  [button] EnergyEvseClearTargetsButton
+  [Attr] EnergyEvseMode (0x009D) | SupportedModes (0x0000)  →  [select] MatterEnergyEvseMode (SupportedModes)
+  [Attr] EnergyEvseMode (0x009D) | CurrentMode (0x0001)  →  [select] MatterEnergyEvseMode (CurrentMode)
+  [Cmd]  EnergyEvseMode (0x009D) | ChangeToMode (0x0000)  →  [select] MatterEnergyEvseMode (ChangeToMode)
+  [Attr] PowerSource (0x002F) | Status (0x0000)  →  [sensor] PowerSourceStatus
+  [Attr] PowerSource (0x002F) | Order (0x0001)  →  [sensor] PowerSourceOrder
+  [Attr] PowerSource (0x002F) | Description (0x0002)  →  [sensor] PowerSourceDescription
+  [Attr] PowerSource (0x002F) | WiredCurrentType (0x0005)  →  [sensor] PowerSourceWiredCurrentType
+  [Attr] PowerSource (0x002F) | WiredNominalVoltage (0x0007)  →  [sensor] PowerSourceWiredNominalVoltage
+  [Attr] PowerSource (0x002F) | WiredMaximumCurrent (0x0008)  →  [sensor] PowerSourceWiredMaximumCurrent
+  [Attr] PowerSource (0x002F) | EndpointList (0x001F)  →  [sensor] PowerSourceEndpointList
+  [Attr] DeviceEnergyManagement (0x0098) | ESAType (0x0000)  →  [sensor] DeviceEnergyManagementESAType
+  [Attr] DeviceEnergyManagement (0x0098) | ESACanGenerate (0x0001)  →  [sensor] DeviceEnergyManagementESACanGenerate
+  [Attr] DeviceEnergyManagement (0x0098) | ESAState (0x0002)  →  [sensor] ESAState
+  [Attr] DeviceEnergyManagement (0x0098) | AbsMinPower (0x0003)  →  [sensor] DeviceEnergyManagementAbsMinPower
+  [Attr] DeviceEnergyManagement (0x0098) | AbsMaxPower (0x0004)  →  [sensor] DeviceEnergyManagementAbsMaxPower
+  [Attr] DeviceEnergyManagement (0x0098) | PowerAdjustmentCapability (0x0005)  →  [sensor] DeviceEnergyManagementPowerAdjustmentCapability
+  [Attr] DeviceEnergyManagement (0x0098) | Forecast (0x0006)  →  [sensor] DeviceEnergyManagementForecast
+  [Attr] DeviceEnergyManagement (0x0098) | OptOutState (0x0007)  →  [sensor] ESAOptOutState
+  [Attr] PowerTopology (0x009C) | AvailableEndpoints (0x0000)  →  [sensor] PowerTopologyAvailableEndpoints
+  [Attr] ElectricalPowerMeasurement (0x0091) | Accuracy (0x0000)  →  [sensor] ElectricalEnergyMeasurementAccuracy
+  [Attr] ElectricalPowerMeasurement (0x0091) | CumulativeEnergyImported (0x0001)  →  [sensor] ElectricalEnergyMeasurementCumulativeEnergyImported
+  [Attr] ElectricalPowerMeasurement (0x0091) | CumulativeEnergyReset (0x0005)  →  [sensor] ElectricalEnergyMeasurementCumulativeEnergyReset
+  [Attr] ElectricalEnergyMeasurement (0x0090) | PowerMode (0x0000)  →  [sensor] ElectricalPowerMeasurementPowerMode
+  [Attr] ElectricalEnergyMeasurement (0x0090) | NumberOfMeasurementTypes (0x0001)  →  [sensor] ElectricalPowerMeasurementNumberOfMeasurementTypes
+  [Attr] ElectricalEnergyMeasurement (0x0090) | Accuracy (0x0002)  →  [sensor] ElectricalPowerMeasurementAccuracy
+  [Attr] ElectricalEnergyMeasurement (0x0090) | Voltage (0x0004)  →  [sensor] ElectricalPowerMeasurementVoltage
+  [Attr] ElectricalEnergyMeasurement (0x0090) | ActiveCurrent (0x0005)  →  [sensor] ElectricalPowerMeasurementActiveCurrent
+  [Attr] ElectricalEnergyMeasurement (0x0090) | ActivePower (0x0008)  →  [sensor] ElectricalPowerMeasurementWatt (ActivePower)
+  [Attr] ElectricalEnergyMeasurement (0x0090) | Frequency (0x000E)  →  [sensor] ElectricalPowerMeasurementFrequency
+  [Attr] DeviceEnergyManagementMode (0x009F) | SupportedModes (0x0000)  →  [select] MatterDeviceEnergyManagementMode (SupportedModes)
+  [Attr] DeviceEnergyManagementMode (0x009F) | CurrentMode (0x0001)  →  [select] MatterDeviceEnergyManagementMode (CurrentMode)
+  [Cmd]  DeviceEnergyManagementMode (0x009F) | ChangeToMode (0x0000)  →  [select] MatterDeviceEnergyManagementMode (ChangeToMode)
+
+--------------------------------------------------------------------------------
+Matter:present + HA:no   (2)  — device 有, 但 HA 缺 mapping ⚠
+--------------------------------------------------------------------------------
+  [Cmd]  EnergyEvseMode (0x009D) | ChangeToModeResponse (0x0001)  →  ep ['0x0001']
+  [Cmd]  DeviceEnergyManagementMode (0x009F) | ChangeToModeResponse (0x0001)  →  ep ['0x0004']
+
+--------------------------------------------------------------------------------
+Matter:missing + HA:yes  (0)  — device 缺, 但 HA 有 mapping
+--------------------------------------------------------------------------------
+  (none)
+
+--------------------------------------------------------------------------------
+Matter:missing + HA:no   (6)  — device 缺 + HA 缺 mapping
+--------------------------------------------------------------------------------
+  [Evt]  EnergyEvse (0x0099) | EVConnected (0x0000)
+  [Evt]  EnergyEvse (0x0099) | EVNotDetected (0x0001)
+  [Evt]  EnergyEvse (0x0099) | EnergyTransferStarted (0x0002)
+  [Evt]  EnergyEvse (0x0099) | EnergyTransferStopped (0x0003)
+  [Evt]  EnergyEvse (0x0099) | Fault (0x0004)
+  [Evt]  EnergyEvse (0x0099) | RFID (0x0005)

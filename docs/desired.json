@@ -1,0 +1,269 @@
+{
+  "description": "Desired Matter structure - Descriptor, BasicInformation, EnergyEvse, EnergyEvseMode, PowerSource, DeviceEnergyManagement, DeviceEnergyManagementMode (attr+cmd+evt)",
+  "version": "1.0",
+  "check_on_all_endpoints": {
+    "0x001D": {
+      "name": "Descriptor",
+      "attributes": [
+        "0x0000",
+        "0x0001",
+        "0x0002",
+        "0x0003"
+      ],
+      "attribute_names": {
+        "0x0000": "DeviceTypeList",
+        "0x0001": "ServerList",
+        "0x0002": "ClientList",
+        "0x0003": "PartsList"
+      }
+    },
+    "0x0028": {
+      "name": "BasicInformation",
+      "attributes": [
+        "0x0000",
+        "0x0001",
+        "0x0002",
+        "0x0004",
+        "0x0007",
+        "0x0008",
+        "0x0009",
+        "0x000A",
+        "0x000B",
+        "0x000F"
+      ],
+      "attribute_names": {
+        "0x0000": "VendorID",
+        "0x0001": "VendorName",
+        "0x0002": "ProductName",
+        "0x0004": "ProductID",
+        "0x0007": "HardwareVersion",
+        "0x0008": "HardwareVersionString",
+        "0x0009": "SoftwareVersion",
+        "0x000A": "SoftwareVersionString",
+        "0x000B": "ManufacturingDate",
+        "0x000F": "SerialNumber"
+      }
+    },
+    "0x0099": {
+      "name": "EnergyEvse",
+      "attributes": [
+        "0x0000",
+        "0x0001",
+        "0x0002",
+        "0x0003",
+        "0x0005",
+        "0x0006",
+        "0x0007",
+        "0x0009",
+        "0x0023",
+        "0x0024",
+        "0x0025",
+        "0x0026",
+        "0x0040",
+        "0x0041",
+        "0x0042"
+      ],
+      "attribute_names": {
+        "0x0000": "State",
+        "0x0001": "SupplyState",
+        "0x0002": "FaultState",
+        "0x0003": "ChargingEnabledUntil",
+        "0x0004": "DischargingEnabledUntil",
+        "0x0005": "CircuitCapacity",
+        "0x0006": "MinimumChargeCurrent",
+        "0x0007": "MaximumChargeCurrent",
+        "0x0008": "MaximumDischargeCurrent",
+        "0x0009": "UserMaximumChargeCurrent",
+        "0x0019": "ChargingPreferences",
+        "0x0023": "NextChargeStartTime",
+        "0x0024": "NextChargeTargetTime",
+        "0x0025": "NextChargeRequiredEnergy",
+        "0x0026": "NextChargeTargetSoC",
+        "0x0027": "ApproximateEVEfficiency",
+        "0x0040": "SessionID",
+        "0x0041": "SessionDuration",
+        "0x0042": "SessionEnergyCharged",
+        "0x0043": "SessionEnergyDischarged"
+      },
+      "commands": [
+        "0x01",
+        "0x02",
+        "0x05",
+        "0x06",
+        "0x07"
+      ],
+      "command_names": {
+        "0x01": "Disable",
+        "0x02": "EnableCharging",
+        "0x03": "EnableDischarging",
+        "0x05": "SetTargets",
+        "0x06": "GetTargets",
+        "0x07": "ClearTargets"
+      },
+      "events": [
+        "0x00",
+        "0x01",
+        "0x02",
+        "0x03",
+        "0x04",
+        "0x05"
+      ],
+      "event_names": {
+        "0x00": "EVConnected",
+        "0x01": "EVNotDetected",
+        "0x02": "EnergyTransferStarted",
+        "0x03": "EnergyTransferStopped",
+        "0x04": "Fault",
+        "0x05": "RFID"
+      }
+    },
+    "0x009D": {
+      "name": "EnergyEvseMode",
+      "attributes": [
+        "0x0000",
+        "0x0001"
+      ],
+      "attribute_names": {
+        "0x0000": "SupportedModes",
+        "0x0001": "CurrentMode",
+        "0x0002": "StartUpMode",
+        "0x0003": "OnMode"
+      },
+      "commands": [
+        "0x00",
+        "0x01"
+      ],
+      "command_names": {
+        "0x00": "ChangeToMode",
+        "0x01": "ChangeToModeResponse"
+      }
+    },
+    "0x002F": {
+      "name": "PowerSource",
+      "attributes": [
+        "0x0000",
+        "0x0001",
+        "0x0002",
+        "0x0005",
+        "0x0007",
+        "0x0008",
+        "0x001F"
+      ],
+      "attribute_names": {
+        "0x0000": "Status",
+        "0x0001": "Order",
+        "0x0002": "Description",
+        "0x0003": "WiredAssessedInputVoltage",
+        "0x0004": "WiredAssessedInputFrequency",
+        "0x0005": "WiredCurrentType",
+        "0x0006": "WiredAssessedCurrent",
+        "0x0007": "WiredNominalVoltage",
+        "0x0008": "WiredMaximumCurrent",
+        "0x0009": "WiredPresent",
+        "0x000A": "ActiveWiredFaults",
+        "0x001F": "EndpointList"
+      }
+    },
+    "0x0098": {
+      "name": "DeviceEnergyManagement",
+      "attributes": [
+        "0x0000",
+        "0x0001",
+        "0x0002",
+        "0x0003",
+        "0x0004",
+        "0x0005",
+        "0x0006",
+        "0x0007"
+      ],
+      "attribute_names": {
+        "0x0000": "ESAType",
+        "0x0001": "ESACanGenerate",
+        "0x0002": "ESAState",
+        "0x0003": "AbsMinPower",
+        "0x0004": "AbsMaxPower",
+        "0x0005": "PowerAdjustmentCapability",
+        "0x0006": "Forecast",
+        "0x0007": "OptOutState"
+      }
+    },
+    "0x009C": {
+      "name": "PowerTopology",
+      "attributes": [
+        "0x0000"
+      ],
+      "attribute_names": {
+        "0x0000": "AvailableEndpoints"
+      }
+    },
+    "0x0091": {
+      "name": "ElectricalPowerMeasurement",
+      "attributes": [
+        "0x0000",
+        "0x0001",
+        "0x0005"
+      ],
+      "attribute_names": {
+        "0x0000": "Accuracy",
+        "0x0001": "CumulativeEnergyImported",
+        "0x0002": "CumulativeEnergyExported",
+        "0x0003": "PeriodicEnergyImported",
+        "0x0004": "PeriodicEnergyExported",
+        "0x0005": "CumulativeEnergyReset"
+      }
+    },
+    "0x0090":{
+      "name": "ElectricalEnergyMeasurement",
+      "attributes": [
+        "0x0000",
+        "0x0001",
+        "0x0002",
+        "0x0004",
+        "0x0005",
+        "0x0008",
+        "0x000E"
+      ],
+      "attribute_names": {
+        "0x0000": "PowerMode",
+        "0x0001": "NumberOfMeasurementTypes",
+        "0x0002": "Accuracy",
+        "0x0003": "Ranges",
+        "0x0004": "Voltage",
+        "0x0005": "ActiveCurrent",
+        "0x0006": "ReactiveCurrent",
+        "0x0007": "ApparentCurrent",
+        "0x0008": "ActivePower",
+        "0x0009": "ReactivePower",
+        "0x000A": "ApparentPower",
+        "0x000B": "RMSVoltage",
+        "0x000C": "RMSCurrent",
+        "0x000D": "RMSPower",
+        "0x000E": "Frequency",
+        "0x000F": "HarmonicCurrents",
+        "0x0010": "HarmonicPhases",
+        "0x0011": "PowerFactor"
+      }
+    },
+    "0x009F": {
+      "name": "DeviceEnergyManagementMode",
+      "attributes": [
+        "0x0000",
+        "0x0001"
+      ],
+      "attribute_names": {
+        "0x0000": "SupportedModes",
+        "0x0001": "CurrentMode",
+        "0x0002": "StartUpMode",
+        "0x0003": "OnMode"
+      },
+      "commands": [
+        "0x00",
+        "0x01"
+      ],
+      "command_names": {
+        "0x00": "ChangeToMode",
+        "0x01": "ChangeToModeResponse"
+      }
+    }
+  }
+}

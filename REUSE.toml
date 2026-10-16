@@ -1,0 +1,44 @@
+# SPDX-FileCopyrightText: ElaadNL
+#
+# SPDX-License-Identifier: Apache-2.0
+
+version = 1
+
+[[annotations]]
+path = [
+  ".dockerignore",
+  ".gitignore",
+  "pyproject.toml",
+  "NOTICE",
+  "VULNERABILITIES.md",
+  "docs/compare_desired_device.py",
+  "docs/desired.json",
+  "docs/evse-compulsory-cluster-test-guide.md",
+  "docs/evse-use-cases.md",
+  "docs/image.png",
+  "docs/output_example.txt",
+  "docs/project-overview-developer.md",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "ElaadNL"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = [
+  "matter_server/**",
+  "tests/**",
+  "scripts/**",
+  "dashboard/**",
+  "main.py",
+  "Dockerfile",
+  "Dockerfile.dev",
+  "docker-entrypoint.sh",
+  "DEVELOPMENT.md",
+  "docs/docker.md",
+  "docs/matter_logo.svg",
+  "docs/os_requirements.md",
+  "docs/websockets_api.md",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "The python-matter-server contributors"
+SPDX-License-Identifier = "Apache-2.0"

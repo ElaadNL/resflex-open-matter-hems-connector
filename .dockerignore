@@ -1,0 +1,20 @@
+# Keep Docker build context clean / portable (esp. Windows npm .bin links)
+.git
+.venv
+.venv-runtime
+**/__pycache__
+**/*.pyc
+**/node_modules
+dashboard/node_modules
+sbom*.json
+requirements-*-locked.txt
+*.md
+!README.md
+docs
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.coverage
+htmlcov
+agent-tools
+_tmp_*
